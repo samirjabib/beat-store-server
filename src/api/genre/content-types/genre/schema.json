@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "genres",
+  "info": {
+    "singularName": "genre",
+    "pluralName": "genres",
+    "displayName": "genre",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "genre": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "genre"
+    },
+    "beats": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::beat.beat",
+      "mappedBy": "genre"
+    }
+  }
+}
